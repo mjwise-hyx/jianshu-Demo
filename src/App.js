@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import GlobalStyle from './style.js';
 
 class App extends Component {
   render() {
     return (
-      <div >
-        hello world!
-      </div>
+      <Fragment>
+        <div >
+          hello world!
+        </div>
+        <GlobalStyle />
+      </Fragment>
     );
   }
 }
