@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { CSSTransition } from 'react-transition-group';
-import   * as actionCreators from './store/actionCreator';
+import { actionCreators } from './store';
 import {
     HeaderWrapper, 
     Logo,
@@ -10,7 +10,8 @@ import {
     SearchWrapper,
     NavSearch,
     Addition,
-    Button
+    Button,
+    SearchInfo
 } from './style';
 
 const Header = (props) => {
@@ -39,6 +40,9 @@ const Header = (props) => {
                     <i className = {props.focused ? 'focused iconfont' : 'iconfont'}>
                         &#xe60b;
                     </i>
+                    <SearchInfo>
+
+                    </SearchInfo>
                 </SearchWrapper>
             </Nav>
         <Addition>
@@ -55,7 +59,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        focused: state.header.focused
+        focused: state.getIn(['header','focused'])
     }
 }
 

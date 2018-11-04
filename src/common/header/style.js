@@ -121,3 +121,16 @@ export const SearchWrapper = styled.div`
     }
 `;
 
+export const SearchInfo = styled.div`
+    position: absolute;
+    left: 0;
+    top: 56px;
+    width: 240px;
+    height: 100px;
+    padding: 0 20px;
+    background: green;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+`
+
+
+
